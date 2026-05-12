@@ -1,0 +1,11 @@
+---
+- name: Implementing host scope variables
+  hosts: 172.31.39.95
+  tasks:
+    - name: Copy passwd file
+      copy:
+        src: "{{a}}"
+        dest: "{{b}}"
+        owner: "{{c}}"
+        group: "{{d}}"
+        mode: "{{e}}"
