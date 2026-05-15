@@ -1,0 +1,13 @@
+---
+- name: Capture OS infor using ansible environment variables
+  hosts: all
+  tasks:
+    - name: Capture OS name
+      debug:
+        var: ansible_distribution
+    - name: Capture OS version
+      debug:
+        var: ansible_distribution_version
+    - name: Capture OS major version
+      debug:
+        var: ansible_distribution_major_version
